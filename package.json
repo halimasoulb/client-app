@@ -2,7 +2,7 @@
   "name": "data-amine",
   "version": "0.0.0",
   "scripts": {
-    "heroku-postbuild": "ng build --prod",
+    "heroku-postbuild": "ng build  --aot --prod",
     "ng": "ng",
     "start": "ng serve.js",
     "build": "ng build",
