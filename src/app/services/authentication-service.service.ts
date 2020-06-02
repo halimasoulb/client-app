@@ -18,7 +18,7 @@ export class AuthenticationServiceService {
 
    login(clientDetail : LoginCredentils) : Observable<any>
   {
-      let url = this.baseUrl + "/authenticate";
+      let url = this.baseUrl + "authenticate";
       return this._http.post(url, clientDetail,{observe: 'response'});
   }
   Logout()
