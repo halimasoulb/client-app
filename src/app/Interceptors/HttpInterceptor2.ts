@@ -18,7 +18,7 @@ export class HTTPListener implements HttpInterceptor {
   }
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
       
-    const allowedOrigins = [environment.apiUrl] ;
+    
 
       return next.handle(request).pipe(map(event => {
           return event;
