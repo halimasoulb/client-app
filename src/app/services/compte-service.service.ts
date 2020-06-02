@@ -10,27 +10,27 @@ export class CompteService {
 
   public  Getcheque(vari): Observable<Array<Compte>>{
     let id = localStorage.getItem("id");
-    return this.httpClient.get<Array<Compte>>("$(environment.apiUrl}/Client/"+id+"/chequecomptes");
+    return this.httpClient.get<Array<Compte>>("https://app-sad9a.herokuapp.com/Client/"+id+"/chequecomptes");
   }
   public Getepargne(vari): Observable<Array<Compte>>{
     let id = localStorage.getItem("id");
-    return this.httpClient.get<Array<Compte>>("$(environment.apiUrl}/Client/"+id+"/epargnecomptes");
+    return this.httpClient.get<Array<Compte>>("https://app-sad9a.herokuapp.com/Client/"+id+"/epargnecomptes");
   }
   constructor(private httpClient:HttpClient) { }
   public Getallepargne(vari):any{
-    return this.httpClient.get("$(environment.apiUrl}/Client/"+vari+"/epargnecomptes");
+    return this.httpClient.get("https://app-sad9a.herokuapp.com/"+vari+"/epargnecomptes");
   }
   public Getallcheque(vari):any{
-    return this.httpClient.get("$(environment.apiUrl}/Client/"+vari+"/chequecomptes");
+    return this.httpClient.get("https://app-sad9a.herokuapp.com/Client/"+vari+"/chequecomptes");
   }
   public Getepargneid(vari){
-    return this.httpClient.get("$(environment.apiUrl}/epargne/"+vari);
+    return this.httpClient.get("https://app-sad9a.herokuapp.com/epargne/"+vari);
   }
   public Getchequeid(vari){
-    return this.httpClient.get("$(environment.apiUrl}/cheque/comptes/"+vari);
+    return this.httpClient.get("https://app-sad9a.herokuapp.com/cheque/comptes/"+vari);
   }
   public getAccountIdByNA(vari){
-    return this.httpClient.get("$(environment.apiUrl}/transaction/idaccount/"+vari);
+    return this.httpClient.get("https://app-sad9a.herokuapp.com/transaction/idaccount/"+vari);
   }
 }
 
