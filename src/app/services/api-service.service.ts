@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class ApiServiceService {
 
-  public host=`$(environment.apiUrl}/transaction/`;
+  public host="https://app-sad9a.herokuapp.com/transaction/";
   
   constructor(private httpClient:HttpClient) { }
 
