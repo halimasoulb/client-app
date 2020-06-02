@@ -15,7 +15,7 @@ export class Interceptor implements HttpInterceptor{
     private token ;
     
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-      const allowedOrigins = [environment.apiUrl] ;
+      
         if (localStorage.getItem("token") != null)
         {
             console.log(localStorage.getItem("token"));
@@ -36,7 +36,7 @@ export class Interceptor implements HttpInterceptor{
         // if (!request.url.match(/www.mydomain.com\//)) {
         //   return request;
         // }
-        const allowedOrigins = [environment.apiUrl] ;
+       
         return request.clone({
           headers: request.headers.set(this.AUTH_HEADER, "Bearer " + this.token)
         });
