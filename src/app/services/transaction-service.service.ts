@@ -9,18 +9,18 @@ export class TransactionServiceService {
 
   constructor(private httpClient:HttpClient) { } 
   public Gettransactions(vari){
-    return this.httpClient.get("$(environment.apiUrl}/transaction/account/"+vari);
+    return this.httpClient.get("https://app-sad9a.herokuapp.com/transaction/account/"+vari);
   }
   public Gettransaction(vari){
-    return this.httpClient.get("$(environment.apiUrl}/transaction/transactions/"+vari);
+    return this.httpClient.get("https://app-sad9a.herokuapp.com/transaction/transactions/"+vari);
   }
   public fairetransaction(receiver,sender,data){
-    return this.httpClient.post("$(environment.apiUrl}/transaction/sendTransaction/"+receiver+"/"+sender,data)
+    return this.httpClient.post("https://app-sad9a.herokuapp.com/transaction/sendTransaction/"+receiver+"/"+sender,data)
   }
   public Gettransactionsender(vari){
-    return this.httpClient.get<Array<Transaction>>("$(environment.apiUrl}/transaction/senderAccount/"+vari);
+    return this.httpClient.get<Array<Transaction>>("https://app-sad9a.herokuapp.com/transaction/senderAccount/"+vari);
   }
   public Gettransactionreceiver(vari){
-    return this.httpClient.get<Array<Transaction>>("$(environment.apiUrl}/transaction/receiverAccount/"+vari);
+    return this.httpClient.get<Array<Transaction>>("https://app-sad9a.herokuapp.com/transaction/receiverAccount/"+vari);
   }
 }
